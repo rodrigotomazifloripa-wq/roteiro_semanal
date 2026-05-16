@@ -21,24 +21,24 @@ DIAS_SEMANA = {
 
 QUERIES = [
     # Tendências globais de tecnologia para negócios
-    "AI agents autonomous business tools 2026",
-    "small business software trends 2026",
-    # Setores específicos brasileiros
-    "tecnologia para restaurantes bares delivery 2026",
-    "sistema para clínicas médicas odontológicas software",
-    "automação para salão de beleza estética gestão",
-    "tecnologia para academia fitness gestão clientes",
-    # Vendas e marketing digital
-    "WhatsApp Business API automação vendas novidades",
-    "tráfego pago inteligência artificial Google Meta ads",
-    "ecommerce ferramentas conversão abandonamento carrinho",
-    # Eficiência operacional e financeira
-    "gestão financeira pequena empresa app controle",
-    "estoque automático reposição inteligente varejo",
-    "nota fiscal eletrônica integração sistema gestão",
-    # Cases e tendências internacionais
-    "retail technology innovation store 2026",
-    "customer service chatbot ROI small business case",
+    "AI agents autonomous business productivity tools 2026",
+    "small business software automation trends 2026",
+    "artificial intelligence ROI business results case study",
+    # Vendas e atendimento ao cliente
+    "WhatsApp Business API automation sales 2026",
+    "customer service chatbot small business results",
+    "CRM automação follow-up vendas pequenas empresas",
+    # Marketing digital e crescimento
+    "tráfego pago inteligência artificial anúncios resultados",
+    "marketing automation email whatsapp conversão empresas",
+    "social media automation business growth tools 2026",
+    # Eficiência operacional e gestão
+    "gestão financeira automação fluxo de caixa empresas",
+    "processos internos automação redução custos empresas",
+    "business process automation cost reduction results 2026",
+    # Inovação e competitividade
+    "digital transformation small business competitive advantage",
+    "tecnologia inovação empresas brasileiras crescimento 2026",
 ]
 
 
@@ -102,9 +102,9 @@ O objetivo dos posts NÃO é falar para outros devs. É mostrar para empresário
 Com base nas notícias acima, crie 6 roteiros completos para a semana — um por dia útil (segunda a sábado).
 
 ### REGRAS DE VARIEDADE — OBRIGATÓRIAS:
-- As 6 opções DEVEM ser de segmentos ou ângulos completamente diferentes entre si. Proibido repetir o mesmo assunto, setor ou abordagem em mais de uma opção.
-- Cada opção deve falar para um tipo diferente de empresário (ex: dono de restaurante, gestor de clínica, lojista de varejo, dono de academia, prestador de serviços, empresário do agronegócio — varie sempre).
-- Priorize temas INESPERADOS e CONCRETOS. Evite os óbvios ("IA vai mudar tudo", "digitalização é importante"). Prefira: "farmácias que usam X aumentaram Y%", "este erro custa R$Z por mês para o seu negócio", "ferramenta desconhecida que seu concorrente já usa".
+- As 6 opções DEVEM ter ângulos completamente diferentes entre si. Proibido repetir o mesmo assunto ou abordagem em mais de uma opção.
+- Todas as opções devem falar para qualquer tipo de empresário ou dono de negócio — sem citar setores específicos (não mencione restaurante, clínica, academia, salão ou qualquer nicho). Use termos genéricos: "seu negócio", "sua empresa", "seus clientes", "sua equipe".
+- Priorize temas INESPERADOS e CONCRETOS. Evite os óbvios ("IA vai mudar tudo", "digitalização é importante"). Prefira: "empresas que usam X aumentaram Y%", "este erro custa R$Z por mês", "ferramenta que seu concorrente já usa e você não conhece".
 - Use dados reais das notícias sempre que possível. Se não houver dado, crie uma situação concreta e verossímil.
 - O tom deve variar entre as 6 opções: misture provocativo, educativo, de case/resultado, de urgência, de curiosidade e de comparação.
 
