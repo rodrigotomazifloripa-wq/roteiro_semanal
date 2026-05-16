@@ -20,12 +20,25 @@ DIAS_SEMANA = {
 }
 
 QUERIES = [
-    "inteligência artificial automação negócios 2026",
-    "tecnologia aumentar vendas pequenas empresas",
-    "AI tools small business automation 2026",
-    "automação atendimento WhatsApp CRM empresas",
-    "sistema gestão varejo tendências novidades",
-    "transformação digital comércio brasileiro",
+    # Tendências globais de tecnologia para negócios
+    "AI agents autonomous business tools 2026",
+    "small business software trends 2026",
+    # Setores específicos brasileiros
+    "tecnologia para restaurantes bares delivery 2026",
+    "sistema para clínicas médicas odontológicas software",
+    "automação para salão de beleza estética gestão",
+    "tecnologia para academia fitness gestão clientes",
+    # Vendas e marketing digital
+    "WhatsApp Business API automação vendas novidades",
+    "tráfego pago inteligência artificial Google Meta ads",
+    "ecommerce ferramentas conversão abandonamento carrinho",
+    # Eficiência operacional e financeira
+    "gestão financeira pequena empresa app controle",
+    "estoque automático reposição inteligente varejo",
+    "nota fiscal eletrônica integração sistema gestão",
+    # Cases e tendências internacionais
+    "retail technology innovation store 2026",
+    "customer service chatbot ROI small business case",
 ]
 
 
@@ -50,7 +63,16 @@ def search_news():
                     print(f"Erro ao buscar query '{query}': {e}")
     except Exception as e:
         print(f"Erro geral na busca de notícias: {e}")
-    return results
+
+    # remove duplicatas pelo título
+    seen = set()
+    unique = []
+    for r in results:
+        key = r["title"].strip().lower()
+        if key and key not in seen:
+            seen.add(key)
+            unique.append(r)
+    return unique
 
 
 def generate_content(news_results):
@@ -77,7 +99,16 @@ O objetivo dos posts NÃO é falar para outros devs. É mostrar para empresário
 
 ## SUA TAREFA
 
-Com base nas notícias acima, selecione os 3 melhores temas para post de hoje. Cada tema deve:
+Com base nas notícias acima, selecione os 3 melhores temas para post de hoje.
+
+### REGRAS DE VARIEDADE — OBRIGATÓRIAS:
+- As 3 opções DEVEM ser de segmentos ou ângulos completamente diferentes entre si. Proibido escolher 3 temas que girem em torno do mesmo assunto (ex: três posts sobre IA, três sobre WhatsApp, três sobre vendas).
+- Cada opção deve falar para um tipo diferente de empresário (ex: Opção 1 para dono de restaurante, Opção 2 para gestor de clínica, Opção 3 para lojista de varejo — ou variações assim).
+- Priorize temas INESPERADOS e CONCRETOS. Evite os óbvios ("IA vai mudar tudo", "digitalização é importante"). Prefira: "farmácias que usam X aumentaram Y%", "este erro custa R$Z por mês para o seu negócio", "ferramenta desconhecida que seu concorrente já usa".
+- Use dados reais das notícias sempre que possível. Se não houver dado, crie uma situação concreta e verossímil.
+- O tom deve variar entre as 3 opções: uma pode ser provocativa, outra educativa, outra de case/resultado.
+
+### CRITÉRIOS DE QUALIDADE POR OPÇÃO:
 1. Ser diretamente relevante para donos de negócio, comerciantes ou gestores (NÃO para devs)
 2. Ter uma aplicação prática clara ("com isso você pode economizar X", "seu cliente recebe resposta em Y segundos", etc.)
 3. Despertar curiosidade ou urgência ("quem ainda não usa está perdendo dinheiro", "seu concorrente já faz isso", etc.)
