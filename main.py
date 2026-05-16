@@ -99,14 +99,14 @@ O objetivo dos posts NÃO é falar para outros devs. É mostrar para empresário
 
 ## SUA TAREFA
 
-Com base nas notícias acima, selecione os 3 melhores temas para post de hoje.
+Com base nas notícias acima, crie 6 roteiros completos para a semana — um por dia útil (segunda a sábado).
 
 ### REGRAS DE VARIEDADE — OBRIGATÓRIAS:
-- As 3 opções DEVEM ser de segmentos ou ângulos completamente diferentes entre si. Proibido escolher 3 temas que girem em torno do mesmo assunto (ex: três posts sobre IA, três sobre WhatsApp, três sobre vendas).
-- Cada opção deve falar para um tipo diferente de empresário (ex: Opção 1 para dono de restaurante, Opção 2 para gestor de clínica, Opção 3 para lojista de varejo — ou variações assim).
+- As 6 opções DEVEM ser de segmentos ou ângulos completamente diferentes entre si. Proibido repetir o mesmo assunto, setor ou abordagem em mais de uma opção.
+- Cada opção deve falar para um tipo diferente de empresário (ex: dono de restaurante, gestor de clínica, lojista de varejo, dono de academia, prestador de serviços, empresário do agronegócio — varie sempre).
 - Priorize temas INESPERADOS e CONCRETOS. Evite os óbvios ("IA vai mudar tudo", "digitalização é importante"). Prefira: "farmácias que usam X aumentaram Y%", "este erro custa R$Z por mês para o seu negócio", "ferramenta desconhecida que seu concorrente já usa".
 - Use dados reais das notícias sempre que possível. Se não houver dado, crie uma situação concreta e verossímil.
-- O tom deve variar entre as 3 opções: uma pode ser provocativa, outra educativa, outra de case/resultado.
+- O tom deve variar entre as 6 opções: misture provocativo, educativo, de case/resultado, de urgência, de curiosidade e de comparação.
 
 ### CRITÉRIOS DE QUALIDADE POR OPÇÃO:
 1. Ser diretamente relevante para donos de negócio, comerciantes ou gestores (NÃO para devs)
@@ -121,7 +121,7 @@ Para cada opção, escolha o formato mais adequado:
 
 ## FORMATO DE ENTREGA
 
-Entregue as 3 opções no formato abaixo, sem resumir, sem cortar — completo para uso imediato:
+Entregue as 6 opções no formato abaixo, sem resumir, sem cortar — completo para uso imediato:
 
 ---
 
@@ -182,8 +182,23 @@ Entregue as 3 opções no formato abaixo, sem resumir, sem cortar — completo p
 
 ---
 
-## 💡 RECOMENDAÇÃO DO DIA
-{{Qual das 3 opções você recomenda para hoje, por quê em 3 frases, e uma dica rápida de execução}}
+## ✅ OPÇÃO 4 — {{TÍTULO DO TEMA}}
+{{mesmo formato completo acima}}
+
+---
+
+## ✅ OPÇÃO 5 — {{TÍTULO DO TEMA}}
+{{mesmo formato completo acima}}
+
+---
+
+## ✅ OPÇÃO 6 — {{TÍTULO DO TEMA}}
+{{mesmo formato completo acima}}
+
+---
+
+## 💡 RECOMENDAÇÃO DA SEMANA
+{{Qual das 6 opções você recomenda para começar a semana, por quê em 3 frases, e uma dica rápida de execução}}
 
 ---
 
@@ -195,7 +210,7 @@ Tom geral: direto, acessível, sem jargão técnico. Rodrigo é o cara que resol
         try:
             message = client.messages.create(
                 model="claude-sonnet-4-6",
-                max_tokens=8000,
+                max_tokens=16000,
                 messages=[{"role": "user", "content": prompt}],
             )
             return message.content[0].text

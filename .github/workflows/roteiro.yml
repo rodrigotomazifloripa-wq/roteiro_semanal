@@ -2,7 +2,7 @@ name: Gerar Roteiros de Conteúdo
 
 on:
   schedule:
-    - cron: "0 11 * * 1,3,5"  # 8h Brasília (UTC-3), Seg/Qua/Sex
+    - cron: "0 11 * * 1"  # 8h Brasília (UTC-3), toda Segunda-feira
   workflow_dispatch:           # permite disparar manualmente pelo GitHub
 
 jobs:
