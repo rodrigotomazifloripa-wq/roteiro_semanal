@@ -160,12 +160,21 @@ Tom geral: direto, acessível, sem jargão técnico. Rodrigo é o cara que resol
 """
 
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-    message = client.messages.create(
-        model="claude-opus-4-6",
-        max_tokens=8000,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    return message.content[0].text
+    for tentativa in range(3):
+        try:
+            message = client.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=8000,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return message.content[0].text
+        except anthropic.InternalServerError as e:
+            if tentativa < 2:
+                print(f"Erro temporário da API (tentativa {tentativa + 1}/3), aguardando 10s...")
+                import time
+                time.sleep(10)
+            else:
+                raise e
 
 
 def _markdown_to_html(text):
