@@ -1,0 +1,16 @@
+services:
+  - type: cron
+    name: conteudo-auto
+    runtime: python
+    schedule: "0 11 * * 1,3,5"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: GMAIL_USER
+        sync: false
+      - key: GMAIL_APP_PASSWORD
+        sync: false
+      - key: RECIPIENT_EMAIL
+        sync: false
