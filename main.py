@@ -1,5 +1,5 @@
 import anthropic
-from duckduckgo_search import DDGS
+from ddgs import DDGS
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
